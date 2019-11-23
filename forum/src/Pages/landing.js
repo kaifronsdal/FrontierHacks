@@ -2,10 +2,11 @@ import React from 'react';
 import 'antd/dist/antd.css';
 import './landing.css';
 import SearchBar from '../Components/searchbar'
-import { Layout, Menu, Icon, } from 'antd';
+import Posts from "../Views/posts"
+import {Layout, Menu, Icon,} from 'antd';
 
-const { Header, Content, Footer, } = Layout;
-const {SubMenu, } = Menu;
+const {Header, Content, Footer,} = Layout;
+const {SubMenu,} = Menu;
 
 
 
@@ -14,21 +15,44 @@ export default class Landing extends React.Component {
         current: 'landing',
         isLoggedIn: false,
     };
-    
+
     handleClick = e => {
         console.log('click ', e);
         this.setState({
             current: e.key,
         });
     };
- 
+
+    signUpState() {
+        if (this.state.isSignedUp) {
+            // return(<Menu.Item key="user"><Icon type = "user"/>Login</Menu.Item>)
+            this.logInState();
+        } else {
+            return (<Menu.Item key="user">
+                <Icon type="user"/>
+                Sign Up
+            </Menu.Item>);
+        }
+    }
+
+    logInState() {
+        if (this.state.isLoggedIn) {
+            return (<Menu.Item key="user"><Icon type="user"/>Profile</Menu.Item>)
+        } else {
+            return (<Menu.Item key="user">
+                <Icon type="user"/>
+                Login
+            </Menu.Item>);
+        }
+    }
+
     menu(){
         if(!this.state.isLoggedIn){
             return(
                 <Menu style={{float: 'right'}} onClick={this.handleClick} selectedKeys={[this.state.current]} mode="horizontal">
                     <Menu.Item>
                         <SearchBar>
-                        
+
                         </SearchBar>
                     </Menu.Item>
                     <Menu.Item key="login">
@@ -47,7 +71,7 @@ export default class Landing extends React.Component {
                         <Icon type="edit" />
                             Create Post
                     </Menu.Item>
-                </Menu> 
+                </Menu>
             );
         } else {
             return(

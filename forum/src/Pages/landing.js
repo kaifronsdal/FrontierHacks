@@ -8,10 +8,11 @@ import {Layout, Menu, Icon,} from 'antd';
 const {Header, Content, Footer,} = Layout;
 const {SubMenu,} = Menu;
 
+
+
 export default class Landing extends React.Component {
     state = {
         current: 'mail',
-        isSignedUp: true,
         isLoggedIn: false,
     };
 
@@ -45,40 +46,49 @@ export default class Landing extends React.Component {
         }
     }
 
-    render() {
-        return (
-            <Layout className="layout">
-                <Header>
-                    <Menu onClick={this.handleClick} selectedKeys={[this.state.current]} mode="horizontal">
-                        {this.signUpState()}
+    menu(){
+        if(!this.state.isLoggedIn){
+            return(
+                <Menu onClick={this.handleClick} selectedKeys={[this.state.current]} mode="horizontal">
+                    <Menu.Item key="login">
+                        <div>
+                        <Icon type="user" />
+                            <a href="/auth/login" target="_blank" rel="noopener noreferrer">Login</a>
+                        </div>
+                    </Menu.Item>
+                    <Menu.Item>
+                        <div>
+                        <Icon type="user" />
+                        <a href="/auth/signup" target="_blank" rel="noopener noreferrer">Sign Up</a>
+                        </div>
+                    </Menu.Item>
+                    <Menu.Item key="post">
+                        <Icon type="edit" />
+                            Create Post
+                    </Menu.Item>
+                </Menu>
+            );
+        } else {
+            return(
+                <Menu onClick={this.handleClick} selectedKeys={[this.state.current]} mode="horizontal">
+                    <Menu.Item key="user"><Icon type = "user"/>
+                        Profile
+                    </Menu.Item>
                         <Menu.Item key="post">
-                            <Icon type="edit"/>
+                            <Icon type="edit" />
                             Create Post
                         </Menu.Item>
-                        <SubMenu
-                            title={
-                                <span className="submenu-title-wrapper">
-                            <Icon type="setting"/>
-                            Navigation Three - Submenu
-                            </span>
-                            }
-                        >
-                            <Menu.ItemGroup title="Item 1">
-                                <Menu.Item key="setting:1">Option 1</Menu.Item>
-                                <Menu.Item key="setting:2">Option 2</Menu.Item>
-                            </Menu.ItemGroup>
-                            <Menu.ItemGroup title="Item 2">
-                                <Menu.Item key="setting:3">Option 3</Menu.Item>
-                                <Menu.Item key="setting:4">Option 4</Menu.Item>
-                            </Menu.ItemGroup>
-                        </SubMenu>
-                        <Menu.Item key="alipay">
-                            <a href="https://ant.design" target="_blank" rel="noopener noreferrer">
-                                Navigation Four - Link
-                            </a>
-                        </Menu.Item>
-                    </Menu>
-                </Header>
+                </Menu>
+            );
+        }
+    }
+
+  render() {
+    return (
+      <Layout className="layout">
+          <Header>
+            {this.menu()}
+          </Header>
 
                 <Content>
                     <Posts></Posts>

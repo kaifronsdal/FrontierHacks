@@ -66,7 +66,7 @@ function onSelect(value) {
             dataSource={dataSource.map(renderOption)}
             onSelect={onSelect}
             onSearch={this.handleSearch}
-            placeholder="input here"
+            placeholder="Search"
             optionLabelProp="text"
           >
             <Input

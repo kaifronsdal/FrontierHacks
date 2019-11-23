@@ -11,7 +11,7 @@ const {SubMenu, } = Menu;
 
 export default class Landing extends React.Component {
     state = {
-        current: 'mail',
+        current: 'landing',
         isLoggedIn: false,
     };
     
@@ -25,7 +25,12 @@ export default class Landing extends React.Component {
     menu(){
         if(!this.state.isLoggedIn){
             return(
-                <Menu onClick={this.handleClick} selectedKeys={[this.state.current]} mode="horizontal">
+                <Menu style={{float: 'right'}} onClick={this.handleClick} selectedKeys={[this.state.current]} mode="horizontal">
+                    <Menu.Item>
+                        <SearchBar>
+                        
+                        </SearchBar>
+                    </Menu.Item>
                     <Menu.Item key="login">
                         <div>
                         <Icon type="user" />
@@ -62,17 +67,17 @@ export default class Landing extends React.Component {
   render() {
     return (
       <Layout className="layout">
-          <Header>
-            {this.menu()}
-          </Header>
+            <Header>
+                {this.menu()}
+            </Header>
 
-          <Content>
+            <Content>
 
-          </Content>
+            </Content>
 
-          <Footer>
+            <Footer>
 
-          </Footer>
+            </Footer>
       </Layout>
     );
   }

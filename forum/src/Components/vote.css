@@ -1,0 +1,14 @@
+#vote {
+    display: flex;
+    align-items: center;
+    margin-top: -14px;
+    font-size: 20px;
+}
+
+#up {
+    color: red;
+}
+
+#down {
+    color: blue;
+}

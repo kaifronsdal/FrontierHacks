@@ -45,6 +45,7 @@ export default class Post extends React.Component {
             </div>
         )
     }
+
     test(e) {
         let target = e.target;
         if (target.onclick != null) {
@@ -64,17 +65,10 @@ export default class Post extends React.Component {
             <Link onClick={this.test} id="post">
                 <Card>
                     <PageHeader
-                        title={<a id="header-title" path="/test">{this.state.subforum}</a>}
+                        title={<Link id="header-title" path={`/${this.state.subforum}`}>{this.state.subforum}</Link>}
                         style={{padding: '0px'}}
                         subTitle={this.state.author}
                         tags={this.getTags()}
-                        // extra={[
-                        //     <Button key="3">Operation</Button>,
-                        //     <Button key="2">Operation</Button>,
-                        //     <Button key="1" type="primary">
-                        //         Primary
-                        //     </Button>,
-                        // ]}
                         avatar={{src: 'https://avatars1.githubusercontent.com/u/8186664?s=460&v=4'}}
                     >
                         {this.getContent()}

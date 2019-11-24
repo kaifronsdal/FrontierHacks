@@ -49,13 +49,13 @@ export default class Posts extends React.Component {
         for (let i = 0; i < subforums.length; i++) {
             if (subforums[i].subforum === props.subforum) {
                 posts = subforums[i].posts;
-                console.log("asd");
                 break;
             }
         }
         this.state = {
             posts: posts,
-            subforum: props.subforum
+            subforum: props.subforum,
+            redirect: props.redirect
         }
     }
 

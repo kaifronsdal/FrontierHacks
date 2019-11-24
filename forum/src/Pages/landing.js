@@ -5,14 +5,15 @@ import Home from "./home"
 import Login from "./login"
 import SignUp from "./signup"
 import Community from "./community"
-import SearchBar from "../Components/search"
 import Post from "./post"
+
+import {Redirect} from 'react-router-dom';
 import {Layout, Icon, Button, Input, Modal, Form} from 'antd';
 import {
     Route,
     Link,
     BrowserRouter,
-    Switch, useParams
+    Switch
 } from "react-router-dom";
 
 const {Search} = Input;
@@ -25,6 +26,7 @@ export default class Landing extends React.Component {
         visible: false,
         confirmLoading: false,
         disabledtrue: true,
+        reroute: ""
     };
 
     handleOk = () => {
@@ -161,11 +163,24 @@ export default class Landing extends React.Component {
                     >
                         <div>
                             {this.getModalContent()}
-
                         </div>
                     </Modal>);
         }
         return null;
+    }
+
+    reroute(value) {
+        this.setState({reroute: value});
+    }
+
+    getReroute() {
+        if (this.state.reroute === "") {
+            return null;
+        } else {
+            const reroute = this.state.reroute;
+            this.setState({reroute: ""});
+            return <Redirect push to={`/${reroute}`}/>;
+        }
     }
 
     render() {
@@ -198,7 +213,10 @@ export default class Landing extends React.Component {
                                 }}>Forum</p>
                             </Link>
                             <div style={{width: '100%', paddingTop: '5px'}}>
-                                <SearchBar/>
+                                <Search
+                                    placeholder="input search text"
+                                    onSearch={value => this.reroute(value)}
+                                />
                             </div>
                         </div>
                         <div style={{flex: 2, paddingTop: '2px', marginBottom: '8px'}}>
@@ -208,13 +226,14 @@ export default class Landing extends React.Component {
 
                     <Content>
                         <Switch>
-                            <Route path={`/:name`}
-                                   render={({match}) => (<div><Community name={match.params.name} numMembers={100}
-                                                                         description={"The Best!"} joined={false}/>
-                                   </div>)}/>
-                            <Route path="/">
+                            {this.getReroute()}
+                            <Route exact path="/">
                                 <Home/>
                             </Route>
+                            <Route path={`/:name`}
+                                   render={({match}) => (<div><Community redirect={this.reroute} name={match.params.name} numMembers={100}
+                                                                         description={"The Best!"} joined={false}/>
+                                   </div>)}/>
                         </Switch>
                     </Content>
 

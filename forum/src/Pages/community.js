@@ -12,7 +12,8 @@ export default class Community extends React.Component {
             name: props.name,
             numMembers: props.numMembers,
             description: props.numMembers,
-            joined: props.joined
+            joined: props.joined,
+            redirect: props.redirect
         }
     }
 
@@ -21,7 +22,7 @@ export default class Community extends React.Component {
             <Row>
                 <Col
                     span={18}>
-                    <Posts subforum={this.state.name}/>
+                    <Posts redirect={this.state.redirect} subforum={this.state.name}/>
                 </Col>
                 <Col span={6}>
                     <Subforum name={this.state.name} numMembers={this.state.numMembers}

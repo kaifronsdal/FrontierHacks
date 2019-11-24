@@ -77,7 +77,7 @@ class App extends React.Component {
                 stateTemp[i].posts.push({
                     author: user.name,
                     content: values.description,
-                    tags: [],
+                    tags: values.tags,
                     votes: 0,
                     numComments: 0,
                     time: "11/24/19",
@@ -96,7 +96,7 @@ class App extends React.Component {
             posts: [{
                 author: user.name,
                 content: values.description,
-                tags: [],
+                tags: values.tags,
                 votes: 0,
                 numComments: 0,
                 time: "11/24/19",

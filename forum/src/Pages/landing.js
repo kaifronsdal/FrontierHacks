@@ -12,7 +12,7 @@ import {Layout, Icon, Button, Input, Modal, Form} from 'antd';
 import {
     Route,
     Link,
-    BrowserRouter,
+    HashRouter,
     Switch
 } from "react-router-dom";
 
@@ -193,7 +193,7 @@ export default class Landing extends React.Component {
 
     render() {
         return (
-            <BrowserRouter>
+            <HashRouter>
                 <Layout className="layout">
                     <div style={{
                         border: '1px solid #e8e8e8',
@@ -251,7 +251,7 @@ export default class Landing extends React.Component {
                     </Footer>
                 </Layout>
                 {this.getModal()}
-            </BrowserRouter>
+            </HashRouter>
         );
     }
 }

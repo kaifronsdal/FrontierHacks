@@ -11,6 +11,7 @@ class NormalLoginForm extends React.Component {
             if (!err) {
                 console.log('Received values of form: ', values);//form values
                 //this.props.onSuccess();
+                this.props.addPost(values);
             }
         });
     };

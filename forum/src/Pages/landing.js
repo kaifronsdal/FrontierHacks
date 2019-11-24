@@ -29,7 +29,7 @@ export default class Landing extends React.Component {
             visible: false,
             confirmLoading: false,
             disabledtrue: true,
-            reroute: ""
+            reroute: "",
         };
     }
 
@@ -111,7 +111,7 @@ export default class Landing extends React.Component {
             case 'Signup':
                 return (<SignUp/>);
             case 'Post':
-                return (<Post/>);
+                return (<Post addPost={this.props.addPost}/>);
             default:
                 return null;
         }

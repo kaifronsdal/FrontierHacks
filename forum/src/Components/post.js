@@ -123,9 +123,7 @@ export default class Post extends React.Component {
     render() {
         return (
             <div>
-                <a onClick={(e) => {
-                    this.test(e);
-                }} id="post">
+                <a onClick={this.test.bind(this)} id="post">
                     <Card>
                         <PageHeader
                             title={<Link id="header-title"

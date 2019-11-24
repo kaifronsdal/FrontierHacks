@@ -4,6 +4,8 @@ import './post.css';
 import Vote from './vote'
 import {PageHeader, Button, Tag, Row, Typography, Icon, Card} from 'antd';
 
+import {Link} from 'react-router-dom';
+
 const {Paragraph} = Typography;
 
 export default class Post extends React.Component {
@@ -61,6 +63,7 @@ export default class Post extends React.Component {
     }
 
     render() {
+
         return (
             <Card>
                 <PageHeader
@@ -82,5 +85,7 @@ export default class Post extends React.Component {
                 </PageHeader>
             </Card>
         );
+
     }
+
 }

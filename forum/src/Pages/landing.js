@@ -12,7 +12,7 @@ const {SubMenu,} = Menu;
 
 export default class Landing extends React.Component {
     state = {
-        current: 'mail',
+        current: 'landing',
         isLoggedIn: false,
     };
 

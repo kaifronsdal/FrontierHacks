@@ -5,6 +5,7 @@ import Home from "./home"
 import Login from "./login"
 import SignUp from "./signup"
 import Community from "./community"
+import SearchBar from "../Components/search"
 import Post from "./post"
 import {Layout, Icon, Button, Input, Modal, Form} from 'antd';
 import {
@@ -197,10 +198,7 @@ export default class Landing extends React.Component {
                                 }}>Forum</p>
                             </Link>
                             <div style={{width: '100%', paddingTop: '5px'}}>
-                                <Search
-                                    placeholder="input search text"
-                                    onSearch={value => console.log(value)}
-                                />
+                                <SearchBar/>
                             </div>
                         </div>
                         <div style={{flex: 2, paddingTop: '2px', marginBottom: '8px'}}>
@@ -211,7 +209,9 @@ export default class Landing extends React.Component {
                     <Content>
                         <Switch>
                             <Route path={`/:name`}
-                                   render={({match}) => (<div> <Community name={match.params.name} numMembers={100} description={"The Best!"} joined={false}/></div>)}/>
+                                   render={({match}) => (<div><Community name={match.params.name} numMembers={100}
+                                                                         description={"The Best!"} joined={false}/>
+                                   </div>)}/>
                             <Route path="/">
                                 <Home/>
                             </Route>

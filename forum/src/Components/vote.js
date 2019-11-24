@@ -4,10 +4,13 @@ import './vote.css';
 import {Icon, Row} from "antd";
 
 export default class Vote extends React.Component {
-    state = {
-        voteState: 0,
-        votes: 10
-    };
+    constructor(props) {
+        super(props);
+        this.state = {
+            voteState: 0,
+            votes: props.votes
+        }
+    }
 
     handleUpVote = () => {
         if (this.state.voteState === 1) {
@@ -41,6 +44,10 @@ export default class Vote extends React.Component {
         }
     }
 
+    onSave() {
+        console.log("saved");
+    }
+
     render() {
         return (
             <Row className="contentLink" type="flex">
@@ -59,6 +66,10 @@ export default class Vote extends React.Component {
                 </p>
                 <a id="vote" onClick={this.handleDownVote}>
                     {this.getDownIcon()}
+                </a>
+                <a style={{paddingLeft: '20px'}} onClick={this.onSave}>
+                    <Icon style={{paddingRight: '5px'}} type="save"/>
+                    Save
                 </a>
             </Row>
         );

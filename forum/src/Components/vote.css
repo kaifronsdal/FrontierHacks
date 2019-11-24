@@ -1,0 +1,15 @@
+#vote {
+    display: flex;
+    align-items: center;
+    margin-top: -14px;
+    font-size: 20px;
+    user-select: none;
+}
+
+#save {
+    color: rgba(0, 0, 0, 0.65);
+}
+
+#save:hover {
+    color: #1890ff;
+}

@@ -16,11 +16,13 @@ var subforums = [{
         comments: [
             {
                 name: "Alex",
-                Comment: "Wow!"
+                comment: "Wow!",
+                time: "20/25/2019"
             },
             {
                 name: "Daniel",
-                Comment: "Much Cool"
+                comment: "Much Cool",
+                time: "20/25/2019"
             }
         ]
     }]
@@ -32,11 +34,13 @@ var subforums = [{
         comments: [
             {
                 name: "Daniel",
-                Comment: "So Cool!"
+                comment: "So Cool!",
+                time: "20/25/2019"
             },
             {
                 name: "Alex",
-                Comment: "Sweet"
+                comment: "Sweet",
+                time: "20/25/2019"
             }
         ]
     }]
@@ -72,7 +76,10 @@ export default class Posts extends React.Component {
                              tags={this.state.posts[i].tags}
                              votes={this.state.posts[i].votes}
                              content={this.state.posts[i].content}
-                             numComments={this.state.posts[i].numComments}/>)
+                             numComments={this.state.posts[i].numComments}
+                             redirect={this.state.redirect}
+                             comments={this.state.posts[i].comments}
+                             time={this.state.posts[i].time}/>)
         }
         return (<div style={{margin: '20px', marginRight: '0px'}}>{posts}</div>);
     }

@@ -174,6 +174,7 @@ export default class Landing extends React.Component {
     }
 
     getReroute() {
+        //console.log(this.props.history);
         if (this.state.reroute === "") {
             return null;
         } else {

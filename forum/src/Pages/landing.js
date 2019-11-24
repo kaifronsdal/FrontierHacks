@@ -76,7 +76,6 @@ export default class Landing extends React.Component {
     showProfile = () => {
 
     };
-
     menu() {
         if (!this.state.isLoggedIn) {
             return (<div id="buttons" style={{

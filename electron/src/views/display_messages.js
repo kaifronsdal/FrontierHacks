@@ -3,6 +3,7 @@ import Message from "../components/message";
 import ReactQueryParams from 'react-query-params';
 import BackBar from "../components/back_bar";
 import {Col, Icon, Row} from "antd";
+import {Link} from 'react-router-dom';
 class DisplayMessages extends Component {
     constructor(props) {
         super(props)
@@ -16,7 +17,7 @@ class DisplayMessages extends Component {
             <div style={{}}>
                 <Row style={{backgroundColor:"white"}}>
                     <Col span={8}>
-                        <a href="/home"><Icon style={{fontSize:"20px", marginTop:"11%", marginLeft:"0%"}} type="left-circle" /></a>
+                        <Link to="/home"><Icon style={{fontSize:"20px", marginTop:"11%", marginLeft:"0%"}} type="left-circle" /></Link>
                     </Col>
                     <Col style={{fontSize:"18px", marginTop:"3%"}} span={8}>
                         <p>A Krantz</p>

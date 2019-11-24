@@ -5,8 +5,7 @@ class ElectronFooter extends Component {
         return (
             <footer>
             <div style={{backgroundColor:"white", marginTop:"1%"}}>
-                <p> For Support Please email support@pinet.ml</p>
-                <p>© PiNet 2019</p>
+                <p>© AtomicNet 2019</p>
             </div>
             </footer>
         )

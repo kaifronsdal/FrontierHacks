@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import MessageCard from "../components/message_card";
 import {Col} from "antd";
+import {Link} from 'react-router-dom';
 
 class DisplayMessageCards extends Component {
     constructor(props) {
@@ -35,9 +36,9 @@ class DisplayMessageCards extends Component {
         return (
             // {message_cards}
             <div>
-                <a href="messages">
+                <Link to="/messages">
             {message_cards}
-                </a>
+                </Link>
             </div>
         )
     }

@@ -1,0 +1,10 @@
+.text {
+    font-size: 16px;
+    text-align: left;
+    margin-left: 0%;
+    margin-bottom: 0%;
+    margin-top: 0%;
+}
+
+#element1 {display:inline-block; text-align: left}
+#element2 {display:inline-block; text-align: right}

@@ -1,0 +1,16 @@
+.messageMine {
+    text-align: right;
+    text-color: grey;
+    font-size: 20px;
+    margin-right: 2%;
+}
+
+.messageMineText {
+    border-radius: 5px;
+    background-color: lightgreen;
+}
+
+.messageNotMineText {
+    border-radius: 5px;
+    background-color: lightblue;
+}

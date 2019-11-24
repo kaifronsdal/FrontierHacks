@@ -5,7 +5,7 @@ import Home from "./home"
 import Login from "./login"
 import SignUp from "./signup"
 import Post from "./post"
-import {Layout, Icon, Button, Input} from 'antd';
+import {Layout, Icon, Button, Input, Modal, Form} from 'antd';
 import {
     Route,
     Link,
@@ -19,6 +19,50 @@ const {Content, Footer} = Layout;
 export default class Landing extends React.Component {
     state = {
         isLoggedIn: false,
+        state: '',
+        visible: false,
+        confirmLoading: false,
+        disabledtrue: true,
+    };
+
+    handleOk = () => {
+        this.setState({
+            confirmLoading: true,
+        });
+        setTimeout(() => {
+            this.setState({
+                visible: false,
+                confirmLoading: false,
+            });
+        }, 2000);
+    };
+
+    handleCancel = () => {
+        console.log('Clicked cancel button');
+        this.setState({
+            visible: false,
+        });
+    };
+
+    showModalLogin = () => {
+        this.setState({
+            state: 'Login',
+            visible: true,
+        });
+    };
+
+    showModalSignup = () => {
+        this.setState({
+            state: 'Signup',
+            visible: true,
+        });
+    };
+
+    showModalPost = () => {
+        this.setState({
+            state: 'Post',
+            visible: true,
+        });
     };
 
     menu() {
@@ -27,9 +71,9 @@ export default class Landing extends React.Component {
                 display: 'flex',
                 flexWrap: 'nowrap'
             }}>
-                <Link to="/Login"><Button key="login"><Icon type="user"/>Login</Button></Link>
-                <Link to="/CreateAccount"><Button key="signup"><Icon type="user"/> Sign Up</Button></Link>
-                <Link to="/Post"><Button key="post" type="primary">Post</Button></Link>
+                <a onClick={this.showModalLogin}><Button key="login"><Icon type="user"/>Login</Button></a>
+                <a onClick={this.showModalSignup}><Button key="signup"><Icon type="user"/> Sign Up</Button></a>
+                <a onClick={this.showModalPost}><Button key="post" type="primary">Post</Button></a>
             </div>);
         } else {
             return (<div id="buttons">
@@ -37,6 +81,89 @@ export default class Landing extends React.Component {
                 <Link to="/Post"><Button key="post" type="primary">Post</Button></Link>
             </div>);
         }
+    }
+
+    getFooter() {
+        if (this.state.state === "Login") {
+            return (<div style={{width: '100%', textAlign: 'left'}}>Or <a onClick={this.showModalSignup}>register
+                now!</a></div>);
+        } else if (this.state.state === "Signup") {
+            return (<div style={{width: '100%', textAlign: 'left'}}>Or <a onClick={this.showModalLogin}>log in
+                now!</a></div>);
+        }
+    }
+
+    getModalContent() {
+        switch (this.state.state) {
+            case 'Login':
+                return (<Login/>);
+            case 'Signup':
+                return (<SignUp/>);
+            case 'Post':
+                return (<Post/>);
+            default:
+                return null;
+        }
+    }
+
+    getModal() {
+        switch (this.state.state) {
+            case 'Login':
+                return (
+                    <Modal
+                        title={this.state.state}
+                        visible={this.state.visible}
+                        onOk={this.handleOk}
+                        confirmLoading={this.state.confirmLoading}
+                        okButtonProps={{disabled: this.state.disabled}}
+                        footer={[this.getFooter()]}
+                        onCancel={this.handleCancel}
+                        onSuccess={this.handleOk}
+                        style={{width: '100%', maxWidth: '300px', height: '100%'}}
+                    >
+                        <div>
+                            {this.getModalContent()}
+
+                        </div>
+                    </Modal>);
+            case 'Signup':
+                return (
+                    <Modal
+                        title={this.state.state}
+                        visible={this.state.visible}
+                        onOk={this.handleOk}
+                        confirmLoading={this.state.confirmLoading}
+                        okButtonProps={{disabled: this.state.disabled}}
+                        footer={[this.getFooter()]}
+                        onCancel={this.handleCancel}
+                        onSuccess={this.handleOk}
+                        style={{width: '100%', maxWidth: '500px', height: '100%'}}
+                    >
+                        <div>
+                            {this.getModalContent()}
+
+                        </div>
+                    </Modal>);
+            case 'Post':
+                return (
+                    <Modal
+                        title={this.state.state}
+                        visible={this.state.visible}
+                        onOk={this.handleOk}
+                        confirmLoading={this.state.confirmLoading}
+                        okButtonProps={{disabled: this.state.disabled}}
+                        footer={[this.getFooter()]}
+                        onCancel={this.handleCancel}
+                        onSuccess={this.handleOk}
+                        style={{width: '100%', maxWidth: '500px', height: '100%'}}
+                    >
+                        <div>
+                            {this.getModalContent()}
+
+                        </div>
+                    </Modal>);
+        }
+        return null;
     }
 
     render() {
@@ -81,28 +208,27 @@ export default class Landing extends React.Component {
                     </div>
 
                     <Content>
-                        <div>
-                            <Switch>
-                                <Route path="/">
-                                    <Home/>
-                                </Route>
-                                <Route path="/Login">
-                                    <Login/>
-                                </Route>
-                                <Route path="/CreateAccount">
-                                    <SignUp/>
-                                </Route>
-                                <Route path="/Post">
-                                    <Post/>
-                                </Route>
-                            </Switch>
-                        </div>
+                        <Switch>
+                            <Route path="/Login">
+                                <Login/>
+                            </Route>
+                            <Route path="/CreateAccount">
+                                <SignUp/>
+                            </Route>
+                            <Route path="/Post">
+                                <Post/>
+                            </Route>
+                            <Route path="/">
+                            </Route>
+                        </Switch>
+                        <Home/>
                     </Content>
 
                     <Footer>
 
                     </Footer>
                 </Layout>
+                {this.getModal()}
             </BrowserRouter>
         );
     }

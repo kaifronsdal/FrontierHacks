@@ -2,24 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="153da7e3-dd71-4908-8e55-be1dad55bed5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/forum/src/Pages/home.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/forum/src/Pages/home.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/forum/src/Pages/login.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/forum/src/Pages/login.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/forum/src/Pages/post.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/forum/src/Pages/post.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/forum/src/Pages/signup.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/forum/src/Pages/signup.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/forum/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/forum/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/forum/src/Components/post.js" beforeDir="false" afterPath="$PROJECT_DIR$/forum/src/Components/post.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/forum/src/Components/searchbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/forum/src/Components/searchbar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/forum/src/Components/vote.css" beforeDir="false" afterPath="$PROJECT_DIR$/forum/src/Components/vote.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/forum/src/Components/vote.js" beforeDir="false" afterPath="$PROJECT_DIR$/forum/src/Components/vote.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/forum/src/Pages/landing.css" beforeDir="false" afterPath="$PROJECT_DIR$/forum/src/Pages/landing.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/forum/src/Pages/landing.js" beforeDir="false" afterPath="$PROJECT_DIR$/forum/src/Pages/landing.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/forum/src/Views/posts.js" beforeDir="false" afterPath="$PROJECT_DIR$/forum/src/Views/posts.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/forum/src/Views/subforum.js" beforeDir="false" afterPath="$PROJECT_DIR$/forum/src/Views/subforum.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/forum/src/Pages/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/forum/src/Pages/login.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/forum/src/Pages/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/forum/src/Pages/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/forum/src/Pages/post.js" beforeDir="false" afterPath="$PROJECT_DIR$/forum/src/Pages/post.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/forum/src/Pages/signup.js" beforeDir="false" afterPath="$PROJECT_DIR$/forum/src/Pages/signup.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -31,37 +20,37 @@
     <session id="-1450606316">
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="css" value="72" />
-          <entry key="js" value="2670" />
+          <entry key="css" value="141" />
+          <entry key="js" value="4630" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="CSS" value="72" />
-          <entry key="JavaScript" value="2670" />
+          <entry key="CSS" value="141" />
+          <entry key="JavaScript" value="4630" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="css" value="7" />
-          <entry key="js" value="11" />
+          <entry key="css" value="11" />
+          <entry key="js" value="18" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CSS" value="7" />
-          <entry key="JavaScript" value="11" />
+          <entry key="CSS" value="11" />
+          <entry key="JavaScript" value="18" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/forum/src/Pages/landing.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-909">
-              <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+            <state relative-caret-position="-388">
+              <caret line="62" column="20" selection-start-line="62" selection-start-column="20" selection-end-line="62" selection-end-column="20" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -69,47 +58,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/forum/src/Pages/home.js">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/forum/src/Pages/post.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="30" lean-forward="true" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/forum/src/Pages/login.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="25" lean-forward="true" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/forum/src/Views/posts.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="41" column="6" lean-forward="true" selection-end-line="59" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/forum/src/Components/post.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="66" column="90" selection-start-line="66" selection-start-column="31" selection-end-line="66" selection-end-column="90" />
+            <state relative-caret-position="93">
+              <caret line="38" column="27" lean-forward="true" selection-start-line="38" selection-start-column="27" selection-end-line="38" selection-end-column="27" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -120,11 +73,50 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/forum/src/Components/vote.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+            <state relative-caret-position="90">
+              <caret line="9" column="25" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/forum/src/Pages/login.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="239">
+              <caret line="32" column="43" lean-forward="true" selection-end-line="59" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/forum/src/Pages/signup.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-985">
+              <caret line="7" column="13" lean-forward="true" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/forum/src/Pages/landing.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="8" selection-start-line="8" selection-end-line="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/forum/src/Pages/login.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="6" selection-start-line="6" selection-end-line="6" />
             </state>
           </provider>
         </entry>
@@ -142,6 +134,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>logInState</find>
+      <find>login</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -155,18 +148,18 @@
         <option value="$PROJECT_DIR$/forum/src/Components/vote.js" />
         <option value="$PROJECT_DIR$/forum/src/Components/post.js" />
         <option value="$PROJECT_DIR$/forum/src/Components/searchbar.js" />
-        <option value="$PROJECT_DIR$/forum/src/Pages/landing.css" />
         <option value="$PROJECT_DIR$/forum/src/App.js" />
         <option value="$PROJECT_DIR$/forum/src/Views/posts.js" />
         <option value="$PROJECT_DIR$/forum/src/Pages/home.css" />
         <option value="$PROJECT_DIR$/forum/src/Pages/home.js" />
         <option value="$PROJECT_DIR$/forum/src/Pages/post.css" />
-        <option value="$PROJECT_DIR$/forum/src/Pages/signup.js" />
-        <option value="$PROJECT_DIR$/forum/src/Pages/post.js" />
         <option value="$PROJECT_DIR$/forum/src/Pages/signup.css" />
         <option value="$PROJECT_DIR$/forum/src/Pages/login.css" />
+        <option value="$PROJECT_DIR$/forum/src/Pages/landing.css" />
         <option value="$PROJECT_DIR$/forum/src/Pages/login.js" />
+        <option value="$PROJECT_DIR$/forum/src/Pages/signup.js" />
         <option value="$PROJECT_DIR$/forum/src/Pages/landing.js" />
+        <option value="$PROJECT_DIR$/forum/src/Pages/post.js" />
       </list>
     </option>
   </component>
@@ -175,6 +168,14 @@
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodeModulesDirectoryManager">
+    <handled-path value="$PROJECT_DIR$/forum/node_modules" />
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths>
+      <path value="$PROJECT_DIR$/forum/package.json" />
+    </packageJsonPaths>
   </component>
   <component name="ProjectId" id="1U2PiAI6sFkRe1s1G7zHkYzTtfJ" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -232,10 +233,12 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -266,7 +269,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9729000" />
+    <option name="totallyTimeSpent" value="18572000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1366" height="688" extended-state="6" />
@@ -277,11 +280,11 @@
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Terminal" weight="0.15771812" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Terminal" sideWeight="0.49962825" visible="true" weight="0.15771812" />
+      <window_info anchor="bottom" id="Event Log" sideWeight="0.50037175" side_tool="true" weight="0.15771812" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.105704695" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49962825" weight="0.2885906" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -321,33 +324,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/forum/src/Components/vote.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/forum/src/Components/post.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="66" column="90" selection-start-line="66" selection-start-column="31" selection-end-line="66" selection-end-column="90" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/forum/src/Pages/landing.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/forum/src/Components/searchbar.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="223">
@@ -368,52 +344,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/forum/src/Views/posts.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="41" column="6" lean-forward="true" selection-end-line="59" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/forum/src/Pages/home.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/forum/src/Pages/post.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/forum/src/Pages/post.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="5" lean-forward="true" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/forum/src/Pages/signup.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/forum/src/Pages/signup.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="27" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="27" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/forum/src/Pages/login.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/forum/src/Pages/home.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="30" lean-forward="true" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
+        <state relative-caret-position="345">
+          <caret line="23" column="1" lean-forward="true" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
@@ -430,10 +373,58 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/forum/src/Views/posts.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-520">
+          <caret column="7" lean-forward="true" selection-start-column="7" selection-end-column="7" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/forum/src/Components/post.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="25" lean-forward="true" selection-start-line="3" selection-start-column="25" selection-end-line="4" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/forum/src/Components/vote.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="9" column="25" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/forum/src/Pages/login.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/forum/src/Pages/landing.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/forum/src/Pages/login.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="25" lean-forward="true" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
+        <state relative-caret-position="239">
+          <caret line="32" column="43" lean-forward="true" selection-end-line="59" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/forum/src/Pages/signup.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-985">
+          <caret line="7" column="13" lean-forward="true" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
@@ -442,8 +433,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/forum/src/Pages/landing.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-909">
-          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+        <state relative-caret-position="-388">
+          <caret line="62" column="20" selection-start-line="62" selection-start-column="20" selection-end-line="62" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/forum/src/Pages/post.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="93">
+          <caret line="38" column="27" lean-forward="true" selection-start-line="38" selection-start-column="27" selection-end-line="38" selection-end-column="27" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>

@@ -4,13 +4,14 @@ import './landing.css';
 import Home from "./home"
 import Login from "./login"
 import SignUp from "./signup"
+import Community from "./community"
 import Post from "./post"
 import {Layout, Icon, Button, Input, Modal, Form} from 'antd';
 import {
     Route,
     Link,
     BrowserRouter,
-    Switch
+    Switch, useParams
 } from "react-router-dom";
 
 const {Search} = Input;
@@ -155,7 +156,7 @@ export default class Landing extends React.Component {
                         footer={[this.getFooter()]}
                         onCancel={this.handleCancel}
                         onSuccess={this.handleOk}
-                        style={{width: '100%', maxWidth: '500px', height: '100%'}}
+                        style={{width: '100%', maxWidth: '650px', height: '100%'}}
                     >
                         <div>
                             {this.getModalContent()}
@@ -209,19 +210,12 @@ export default class Landing extends React.Component {
 
                     <Content>
                         <Switch>
-                            <Route path="/Login">
-                                <Login/>
-                            </Route>
-                            <Route path="/CreateAccount">
-                                <SignUp/>
-                            </Route>
-                            <Route path="/Post">
-                                <Post/>
-                            </Route>
+                            <Route path={`/:name`}
+                                   render={({match}) => (<div> <Community name={match.params.name} numMembers={100} description={"The Best!"} joined={false}/></div>)}/>
                             <Route path="/">
+                                <Home/>
                             </Route>
                         </Switch>
-                        <Home/>
                     </Content>
 
                     <Footer>

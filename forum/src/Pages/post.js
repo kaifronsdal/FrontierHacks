@@ -2,7 +2,7 @@ import React from 'react';
 import 'antd/dist/antd.css';
 import './post.css';
 
-import {Form, Icon, Input, Button, Checkbox} from 'antd';
+import {Form, Input, Button} from 'antd';
 
 class NormalLoginForm extends React.Component {
     handleSubmit = e => {
@@ -18,37 +18,37 @@ class NormalLoginForm extends React.Component {
     render() {
         const {getFieldDecorator} = this.props.form;
         return (
-            <Form onSubmit={this.handleSubmit} className="login-form" style={{width:'100%'}}>
-                <Form.Item label="Title" style={{width: '100%'}}>
+            <Form onSubmit={this.handleSubmit} className="login-form" style={{width:'450px'}}>
+                <Form.Item label="Title" style={{width: '450px'}}>
                     {getFieldDecorator('title', {
                         rules: [{required: true, message: 'Please input your title!'}],
                     })(
                         <Input
-                            style={{width:'100%'}}
+                            style={{width:'450px'}}
                             placeholder="title"
                         />,
                     )}
                 </Form.Item>
-                <Form.Item label="Description" style={{width: '100%'}}>
+                <Form.Item label="Description" style={{width: '450px'}}>
                     {getFieldDecorator('description', {
                         rules: [{required: true, message: 'Please input your description!'}],
                     })(
                         <Input.TextArea
-                            style={{width:'100%'}}
+                            style={{width:'450px'}}
                             placeholder="description"
                         />,
                     )}
                 </Form.Item>
-                <Form.Item label="Community" style={{width: '100%'}}>
+                <Form.Item label="Community" style={{width: '450px'}}>
                     {getFieldDecorator('community', {
                         rules: [{required: true, message: 'Please choose a community!'}],
                     })(
                         <Input
-                            style={{width:'100%'}}
+                            style={{width:'450px'}}
                             placeholder="all"
                         />,
                     )}
-                    <Button style={{width: '100%'}} type="primary" htmlType="submit" className="login-form-button">
+                    <Button style={{width: '450px'}} type="primary" htmlType="submit" className="login-form-button">
                         Post
                     </Button>
                 </Form.Item>

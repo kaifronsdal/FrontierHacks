@@ -14,11 +14,16 @@ class App extends React.Component {
   render() {
     return (
       <Router>
-        
-      </Router>
+
+      
       <Landing>
 
       </Landing>
+      <Switch>
+          <Route path="/Components"></Route>
+          <Route path="/post.js"></Route>
+        </Switch>
+      </Router>
     );
   }
 }

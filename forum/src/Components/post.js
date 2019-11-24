@@ -2,7 +2,8 @@ import React from 'react';
 import 'antd/dist/antd.css';
 import './post.css';
 import Vote from './vote'
-import {PageHeader, Button, Tag, Row, Typography, Icon} from 'antd';
+import {PageHeader, Button, Tag, Row, Typography, Icon, Card} from 'antd';
+import {Link} from 'react-router-dom';
 
 const {Paragraph} = Typography;
 
@@ -56,6 +57,7 @@ const Footer = ({votes}) => (
 );
 
 export default class Post extends React.Component {
+    
     state = {
         subforum: "news",
         author: "Kai Fronsdal",
@@ -74,6 +76,7 @@ export default class Post extends React.Component {
     }
 
     render() {
+        
         return (
             <Card>
             <PageHeader
@@ -89,11 +92,13 @@ export default class Post extends React.Component {
                     </Button>,
                 ]}
                 avatar={{src: 'https://avatars1.githubusercontent.com/u/8186664?s=460&v=4'}}
-            >
+            ><Link to="/post.js">Post</Link>
                 {content}
                 <Vote />
             </PageHeader>
             </Card>
         );
+        
     }
+    
 }

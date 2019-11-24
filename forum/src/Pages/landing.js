@@ -23,29 +23,6 @@ export default class Landing extends React.Component {
         });
     };
 
-    signUpState() {
-        if (this.state.isSignedUp) {
-            // return(<Menu.Item key="user"><Icon type = "user"/>Login</Menu.Item>)
-            this.logInState();
-        } else {
-            return (<Menu.Item key="user">
-                <Icon type="user"/>
-                Sign Up
-            </Menu.Item>);
-        }
-    }
-
-    logInState() {
-        if (this.state.isLoggedIn) {
-            return (<Menu.Item key="user"><Icon type="user"/>Profile</Menu.Item>)
-        } else {
-            return (<Menu.Item key="user">
-                <Icon type="user"/>
-                Login
-            </Menu.Item>);
-        }
-    }
-
     menu(){
         if(!this.state.isLoggedIn){
             return(

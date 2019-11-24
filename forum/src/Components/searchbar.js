@@ -2,6 +2,12 @@ import React from 'react';
 import 'antd/dist/antd.css';
 import { Icon, Button, Input, AutoComplete } from 'antd';
 import './searchbar.css';
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link
+  } from "react-router-dom";
 
 const { Option } = AutoComplete;
 
@@ -30,13 +36,11 @@ function onSelect(value) {
         <div className="global-search-item">
           <span className="global-search-item-desc">
             Found {item.query} on
-            <a
-              href={`https://s.taobao.com/search?q=${item.query}`}
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              path="/Components/post.js"
             >
               {item.category}
-            </a>
+            </Link>
           </span>
           <span className="global-search-item-count">{item.count} results</span>
         </div>

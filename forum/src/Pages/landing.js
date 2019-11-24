@@ -1,112 +1,109 @@
 import React from 'react';
 import 'antd/dist/antd.css';
 import './landing.css';
-import SearchBar from '../Components/searchbar'
-import Posts from "../Views/posts"
-import Subforum from "../Views/subforum"
-import {Layout, Menu, Icon, Row, Col} from 'antd';
+import Home from "./home"
+import Login from "./login"
+import SignUp from "./signup"
+import Post from "./post"
+import {Layout, Icon, Button, Input} from 'antd';
+import {
+    Route,
+    Link,
+    BrowserRouter,
+    Switch
+} from "react-router-dom";
 
-const {Header, Content, Footer} = Layout;
-const {SubMenu,} = Menu;
-
+const {Search} = Input;
+const {Content, Footer} = Layout;
 
 export default class Landing extends React.Component {
     state = {
-        current: 'landing',
         isLoggedIn: false,
     };
 
-    handleClick = e => {
-        console.log('click ', e);
-        this.setState({
-            current: e.key,
-        });
-    };
-
-    signUpState() {
-        if (this.state.isSignedUp) {
-            // return(<Menu.Item key="user"><Icon type = "user"/>Login</Menu.Item>)
-            this.logInState();
-        } else {
-            return (<Menu.Item key="user">
-                <Icon type="user"/>
-                Sign Up
-            </Menu.Item>);
-        }
-    }
-
-    logInState() {
-        if (this.state.isLoggedIn) {
-            return (<Menu.Item key="user"><Icon type="user"/>Profile</Menu.Item>)
-        } else {
-            return (<Menu.Item key="user">
-                <Icon type="user"/>
-                Login
-            </Menu.Item>);
-        }
-    }
-
     menu() {
         if (!this.state.isLoggedIn) {
-            return (
-                <Menu onClick={this.handleClick} selectedKeys={[this.state.current]} mode="horizontal">
-                    <Menu.Item key="login">
-                        <div>
-                            <Icon type="user"/>
-                            <a href="/auth/login" target="_blank" rel="noopener noreferrer">Login</a>
-                        </div>
-                    </Menu.Item>
-                    <Menu.Item>
-                        <div>
-                            <Icon type="user"/>
-                            <a href="/auth/signup" target="_blank" rel="noopener noreferrer">Sign Up</a>
-                        </div>
-                    </Menu.Item>
-                    <Menu.Item key="post">
-                        <Icon type="edit"/>
-                        Create Post
-                    </Menu.Item>
-                </Menu>
-            );
+            return (<div id="buttons" style={{
+                display: 'flex',
+                flexWrap: 'nowrap'
+            }}>
+                <Link to="/Login"><Button key="login"><Icon type="user"/>Login</Button></Link>
+                <Link to="/CreateAccount"><Button key="signup"><Icon type="user"/> Sign Up</Button></Link>
+                <Link to="/Post"><Button key="post" type="primary">Post</Button></Link>
+            </div>);
         } else {
-            return (
-                <Menu onClick={this.handleClick} selectedKeys={[this.state.current]} mode="horizontal">
-                    <Menu.Item key="user"><Icon type="user"/>
-                        Profile
-                    </Menu.Item>
-                    <Menu.Item key="post">
-                        <Icon type="edit"/>
-                        Create Post
-                    </Menu.Item>
-                </Menu>
-            );
+            return (<div id="buttons">
+                <Link to="Profile"><Button key="profile">Profile</Button></Link>
+                <Link to="/Post"><Button key="post" type="primary">Post</Button></Link>
+            </div>);
         }
     }
 
     render() {
         return (
-            <Layout className="layout">
-                <Header>
-                    {this.menu()}
-                </Header>
+            <BrowserRouter>
+                <Layout className="layout">
+                    <div style={{
+                        border: '1px solid #e8e8e8',
+                        backgroundColor: '#FFF',
+                        width: '100%',
+                        display: 'flex',
+                        flexWrap: 'wrap',
+                        alignItems: 'flex-start',
+                        paddingTop: '5px'
+                    }}>
+                        <div
+                            style={{
+                                flex: 4,
+                                marginRight: '5%',
+                                marginBottom: '-25px',
+                                minWidth: '300px',
+                                display: 'flex'
+                            }}>
 
-                <Content>
-                    <div>
-                        <Row>
-                            <Col span={18}>
-                                <Posts/>
-                            </Col>
-                            <Col span={6}>
-                                <Subforum/>
-                            </Col>
-                        </Row>
+                            <Link to="/">
+                                <p style={{
+                                    fontSize: '25px',
+                                    marginLeft: '15px',
+                                    marginRight: '20px',
+                                }}>Forum</p>
+                            </Link>
+                            <div style={{width: '100%', paddingTop: '5px'}}>
+                                <Search
+                                    placeholder="input search text"
+                                    onSearch={value => console.log(value)}
+                                />
+                            </div>
+                        </div>
+                        <div style={{flex: 2, paddingTop: '2px', marginBottom: '8px'}}>
+                            {this.menu()}
+                        </div>
                     </div>
-                </Content>
 
-                <Footer>
+                    <Content>
+                        <div>
+                            <Switch>
+                                <Route path="/">
+                                    <Home/>
+                                </Route>
+                                <Route path="/Login">
+                                    <Login/>
+                                </Route>
+                                <Route path="/CreateAccount">
+                                    <SignUp/>
+                                </Route>
+                                <Route path="/Post">
+                                    <Post/>
+                                </Route>
+                            </Switch>
+                        </div>
+                    </Content>
 
-                </Footer>
-            </Layout>
+                    <Footer>
+
+                    </Footer>
+                </Layout>
+            </BrowserRouter>
         );
     }
 }

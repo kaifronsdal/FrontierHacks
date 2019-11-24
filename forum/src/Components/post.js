@@ -12,29 +12,13 @@ export default class Post extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            subforum: props.subforum,//"news",
-            author: props.author,//"Kai Fronsdal",
-            tags: props.tags,//["Tag A", "Tag B"],
-            votes: props.votes,//10,
-            content: props.content,//"Ant Design interprets the color system into two levels: a" +
-                // "system-level color system and a product-level color system.\n\n" +
-                // "Ant Design's design team preferred to design with the HSB color " +
-                // "model, which makes it easier for designers to have a clear psychological " +
-                // "expectation of color when adjusting colors, as well as facilitate " +
-                // "communication in teams.",
+            subforum: props.subforum,
+            author: props.author,
+            tags: props.tags,
+            votes: props.votes,
+            content: props.content,
+            numComments: props.numComments,
         };
-        // {
-        //     subforum: "news",
-        //     author: "Kai Fronsdal",
-        //     tags: ["Tag A", "Tag B"],
-        //     votes: 10,
-        //     content: "Ant Design interprets the color system into two levels: a" +
-        //         "system-level color system and a product-level color system.\n\n" +
-        //         "Ant Design's design team preferred to design with the HSB color " +
-        //         "model, which makes it easier for designers to have a clear psychological " +
-        //         "expectation of color when adjusting colors, as well as facilitate " +
-        //         "communication in teams.",
-        // };
     }
 
     getTags() {
@@ -61,29 +45,43 @@ export default class Post extends React.Component {
             </div>
         )
     }
+    test(e) {
+        let target = e.target;
+        if (target.onclick != null) {
+            return;
+        }
+        while (target.parentElement !== document.getElementById("post")) {
+            target = target.parentElement;
+            if (target.onclick != null) {
+                return;
+            }
+        }
+        console.log("test")
+    }
 
     render() {
-
         return (
-            <Card>
-                <PageHeader
-                    title={<a id="header-title" path="/test">{this.state.subforum}</a>}
-                    style={{border: '1px solid rgb(235, 237, 240)'}}
-                    subTitle={this.state.author}
-                    tags={this.getTags()}
-                    // extra={[
-                    //     <Button key="3">Operation</Button>,
-                    //     <Button key="2">Operation</Button>,
-                    //     <Button key="1" type="primary">
-                    //         Primary
-                    //     </Button>,
-                    // ]}
-                    avatar={{src: 'https://avatars1.githubusercontent.com/u/8186664?s=460&v=4'}}
-                >
-                    {this.getContent()}
-                    <Vote votes={this.state.votes}/>
-                </PageHeader>
-            </Card>
+            <Link onClick={this.test} id="post">
+                <Card>
+                    <PageHeader
+                        title={<a id="header-title" path="/test">{this.state.subforum}</a>}
+                        style={{padding: '0px'}}
+                        subTitle={this.state.author}
+                        tags={this.getTags()}
+                        // extra={[
+                        //     <Button key="3">Operation</Button>,
+                        //     <Button key="2">Operation</Button>,
+                        //     <Button key="1" type="primary">
+                        //         Primary
+                        //     </Button>,
+                        // ]}
+                        avatar={{src: 'https://avatars1.githubusercontent.com/u/8186664?s=460&v=4'}}
+                    >
+                        {this.getContent()}
+                        <Vote votes={this.state.votes} numComments={this.state.numComments}/>
+                    </PageHeader>
+                </Card>
+            </Link>
         );
 
     }

@@ -8,7 +8,8 @@ export default class Vote extends React.Component {
         super(props);
         this.state = {
             voteState: 0,
-            votes: props.votes
+            votes: props.votes,
+            numComments: props.numComments,
         }
     }
 
@@ -50,7 +51,7 @@ export default class Vote extends React.Component {
 
     render() {
         return (
-            <Row className="contentLink" type="flex">
+            <Row className="contentLink" type="flex" style={{marginBottom: '-17px'}}>
                 <a id="vote" onClick={this.handleUpVote}>
                     {this.getUpIcon()}
                 </a>
@@ -58,8 +59,8 @@ export default class Vote extends React.Component {
                 <p
                     style={{
                         fontSize: '15px',
-                        paddingRight: '5px',
-                        paddingLeft: '5px'
+                        paddingRight: '3px',
+                        paddingLeft: '3px'
                     }}
                 >
                     {this.state.votes + this.state.voteState}
@@ -67,10 +68,14 @@ export default class Vote extends React.Component {
                 <a id="vote" onClick={this.handleDownVote}>
                     {this.getDownIcon()}
                 </a>
-                <a style={{paddingLeft: '20px'}} onClick={this.onSave}>
+                <a id="save" style={{paddingLeft: '20px'}} onClick={this.onSave}>
                     <Icon style={{paddingRight: '5px'}} type="save"/>
                     Save
                 </a>
+                <div style={{paddingLeft: '20px'}}>
+                    <Icon style={{paddingRight: '5px'}} type="message"/>
+                    {this.state.numComments} Comments
+                </div>
             </Row>
         );
     }

@@ -3,20 +3,42 @@ import 'antd/dist/antd.css';
 import './posts.css';
 import Post from '../Components/post'
 
+var posts = [{
+    subforum: "news", author: "Kai Fronsdal", tags: ["Tag A", "Tag B"], votes: 30,
+    content: "Ant Design interprets the color system into two levels: a" +
+        "system-level color system and a product-level color system.\n\n" +
+        "Ant Design's design team preferred to design with the HSB color " +
+        "model, which makes it easier for designers to have a clear psychological " +
+        "expectation of color when adjusting colors, as well as facilitate " +
+        "communication in teams.", numComments: 3, time: "20/25/2019",
+    comments: [
+        {
+            name: "Alex",
+            Comment: "Wow!"
+        },
+        {
+            name: "Daniel",
+            Comment: "Much Cool"
+        }
+    ]
+}, {
+    subforum: "meme", author: "Uri Dickman", tags: ["Tagz"], votes: 107,
+    content: "The quick brown fox jumped over the lazy dog.", numComments: 56, time: "4/1/2019",
+    comments: [
+        {
+            name: "Daniel",
+            Comment: "So Cool!"
+        },
+        {
+            name: "Alex",
+            Comment: "Sweet"
+        }
+    ]
+}];
+
 export default class Posts extends React.Component {
     state = {
-        posts: [{
-            subforum: "news", author: "Kai Fronsdal", tags: ["Tag A", "Tag B"], votes: 30,
-            content: "Ant Design interprets the color system into two levels: a" +
-                "system-level color system and a product-level color system.\n\n" +
-                "Ant Design's design team preferred to design with the HSB color " +
-                "model, which makes it easier for designers to have a clear psychological " +
-                "expectation of color when adjusting colors, as well as facilitate " +
-                "communication in teams."
-        }, {
-            subforum: "meme", author: "Uri Dickman", tags: ["Tagz"], votes: 107,
-            content: "The quick brown fox jumped over the lazy dog."
-        }]
+        posts: posts
     };
 
     render() {
@@ -29,8 +51,9 @@ export default class Posts extends React.Component {
                              author={this.state.posts[i].author}
                              tags={this.state.posts[i].tags}
                              votes={this.state.posts[i].votes}
-                             content={this.state.posts[i].content}/>)
+                             content={this.state.posts[i].content}
+                             numComments={this.state.posts[i].numComments}/>)
         }
-        return (<div>{posts}</div>);
+        return (<div style={{margin: '20px', marginRight: '0px'}}>{posts}</div>);
     }
 }
